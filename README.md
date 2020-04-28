@@ -2,7 +2,7 @@
 The repository includes all the files to enable end to end vm deployment by separating the Azure account details and the VM credentials from main.tf file..
 
 These files will enable:
-1.	 Connecting and authenticating with Azure using credentials and the cloud subscription account details stored in a variables.tf file. 
+1.	 Connecting and authenticating with Azure using credentials and the cloud subscription account details stored in a terraform.tfvars file which are referenced using variables.tf. 
 2.	The main.tf template will provision a self-sufficient VM which does not need the VM credentials stored (hard coded) in the file. This will enable providing a unique account name and password for the VM administrator account for every deployment.
 3.	An end user will set the credentials of the VM being provisioned, the VM deployment region, and a prefix to the resources being provisioned.
 4.	It saves the environment state locally (at end user machine).
@@ -22,7 +22,7 @@ iii.	Set the Azure Region to deploy the VM (e.g., australiaeast)
 iv.	Set the environment resource variable prefix (e.g. prddb)
 The command will show details of 10 new resources which will be provisioned. This is a planning phase and no resources will be provisioned at this stage. 
 c.	terraform apply newplan
-The script will provision all the 10 new resources in less than 90 seconds.
+The script will provision all the 10 new resources in less than 3 minutes.
 
 2.	Run the following command from your PowerShell or MacOS Terminal to see the details of all the resources provisioned in your terminal screen
 terraform show
@@ -31,6 +31,5 @@ terraform show
 3.	Run the following command from your PowerShell or MacOS Terminal to destroy the provisioned environment (the vm and all the associated resources will be destroyed) 
 terraform destroy (to see details of all the provisioned resources)
 
-The script will prompt you to provide previously provided details and a confirmation “Yes” to destroy the environment before it initiates the process of removing all the resources. 
-
+The script will prompt you to provide previously provided details and a confirmation “Yes” to destroy the environment before it initiates the process of removing all the resources.
 
