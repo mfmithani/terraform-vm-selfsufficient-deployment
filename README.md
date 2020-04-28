@@ -31,6 +31,6 @@ terraform show
 3.	Run the following command from your PowerShell or MacOS Terminal to destroy the provisioned environment (the vm and all the associated resources will be destroyed) 
 terraform destroy (to see details of all the provisioned resources)
 
-
+The script will prompt you to provide previously provided details and a confirmation “Yes” to destroy the environment before it initiates the process of removing all the resources. 
 
 
