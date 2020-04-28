@@ -1,4 +1,4 @@
-# vm-selfsufficient-deployment
+# terraform-vm-selfsufficient-deployment
 The repository includes all the files to enable end to end vm deployment by separating the Azure account details and the VM credentials from main.tf file..
 
 These files will enable:
@@ -22,7 +22,7 @@ iii.	Set the Azure Region to deploy the VM (e.g., australiaeast)
 iv.	Set the environment resource variable prefix (e.g. prddb)
 The command will show details of 10 new resources which will be provisioned. This is a planning phase and no resources will be provisioned at this stage. 
 c.	terraform apply newplan
-The script will provision all the 10 new resources in less than 3 minutes.
+The script will provision all the 10 new resources in less than 90 seconds.
 
 2.	Run the following command from your PowerShell or MacOS Terminal to see the details of all the resources provisioned in your terminal screen
 terraform show
